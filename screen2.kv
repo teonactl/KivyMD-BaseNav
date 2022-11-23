@@ -1,9 +1,23 @@
 <Screen2@MDScreen>:
     name: "screen2"
-    MDBoxLayout:
-        orientation: 'vertical'
-        MDLabel : 
-            text : "Screen 2"
-            pos_hint: {'x': 0.5, 'y': 0.5}
+    id : screen2
+    RecycleViewer : 
 
- 
+
+
+
+<RecycleViewer>:
+    viewclass: 'Button'  # defines the viewtype for the data items.
+    orientation: "vertical"
+    spacing: 40
+    padding:10, 10
+    space_x: self.size[0]/3 
+    size_hint_y : self.parent.size_hint_y
+
+    RecycleGridLayout:
+        color:(0, 0.7, 0.4, 0.8)
+        #defines the size of the widget in reference to width and height
+        default_size_hint: 0.4, None
+        size_hint_y: None
+        height: self.minimum_height
+        cols: 1
