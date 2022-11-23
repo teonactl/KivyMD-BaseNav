@@ -17,10 +17,10 @@ class RecycleViewer(RecycleView):
         super(RecycleViewer, self).__init__(**kwargs)
         self.data = [{'text': str(x)} for x in range(20)]
 
-class BandiApp(MDApp):
+class NavigationApp(MDApp):
     def build(self):
         self.theme_cls.theme_style = "Dark"
         return MainScreen()
 
 
-BandiApp().run()
+NavigationApp().run()
