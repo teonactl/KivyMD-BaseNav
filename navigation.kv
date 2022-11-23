@@ -15,17 +15,17 @@
     selected_color: "#4a4939"
     _no_ripple_effect: True
 
-
 <MainScreen>:
 
     MDTopAppBar:
+        id : topbar
         pos_hint: {"top": 1}
         elevation: 4
         title: "MyNavApp"
         left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
     MDNavigationLayout:
-
+        size_hint_y: 1.0 - topbar.height/root.height
         MDScreenManager:
             id: screen_manager
 
